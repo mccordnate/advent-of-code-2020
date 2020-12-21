@@ -11,6 +11,6 @@
 (defun ride (moveX moveY)
   (loop sum moveX into currX
 	sum moveY into currY
-	until (eql currY hill-height)
+	until (>= currY hill-height)
 	counting (is-tree (get-char currX currY)) into count
 	finally (return count)))
